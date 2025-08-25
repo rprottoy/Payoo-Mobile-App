@@ -1,7 +1,7 @@
 // Login button functionality
 document.getElementById("loginBtn").addEventListener("click", function (event) {
   //   console.log("Clicked");
-  const mobileNumber = "01687494140";
+  const mobileNumber = 01687494140;
   const pinNumber = 1234;
 
   // Connecting the input box with DOM So that we can match the required mobile and Pin number
