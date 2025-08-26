@@ -26,7 +26,7 @@ document.getElementById("add-money").addEventListener("click", function () {
 });
 
 // Cash Withdraw Section works
-const pin = 1234;
+
 const withdrawBtn = document
   .getElementById("withdraw-btn")
   .addEventListener("click", function () {
@@ -34,6 +34,17 @@ const withdrawBtn = document
     const withdrawAmount = parseInt(
       document.getElementById("withdraw-amount").value
     );
+    const agentNumber = document.getElementById("agent-number").value;
+    const pinNumber = parseInt(document.getElementById("pin-number").value);
+    // console.log(agentNumber);
+    if (agentNumber.length < 11) {
+      alert("Please input valid agent number");
+      return;
+    }
+    if (pinNumber !== validPin) {
+      alert("Please provide a valid pin");
+      return;
+    }
     const totalDollarAmount = parseInt(
       document.getElementById("dollar-amount").innerText
     );
